@@ -3,6 +3,7 @@ Professional website for the PFT physiotherapic center
 
 ## Project structure
 
+```
 proj/
 	source/
 		assets/
@@ -33,3 +34,4 @@ proj/
 			about.html
 		index.html
 	README.md
+```
