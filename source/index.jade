@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='pages/home.css', charset='utf-8')
+    title
+  body
+    page(size='A4')
+      header
+        .name Beatrice Chirio
+        .info
+          ul
+            li.bold Sociologa specializzata in Children's Rights
+            li 19/07/1990, Moncalieri, Torino
+            li beatrice.chirio@gmail.com
+            li +39 340 123 4567
+            li <span class="bold">Inglese</span> B2
+        .picture
+          //img(src='sections/img/profile.jpg', alt='')
+        .baloon
+          | Sono una sociologa esperta in Children Rights e interessata a lavorare nel mondo della <span class="bold">cooperazione internazionale</span> per la tutela dei <span class="bold">diritti degli Under18</span> nel mondo.
+      != partial('sections/lavoro')
+    page(size='A4')
+      != partial('sections/formazione')
+      != partial('sections/volontariato')
+    // page(size='A4')
