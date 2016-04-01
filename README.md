@@ -8,6 +8,9 @@ proj/
 	source/
 		assets/
 			img/
+		pages/
+			_home.sass
+			_home.jade
 		_components/
 			_nav/
 			..
@@ -19,10 +22,7 @@ proj/
 		_style/
 			_partials/
 				_vars.sass
-				_globals.sass
-			_pages/
-				_home.sass
-				_about.sass				
+				_globals.sass			
 		_script/
 			_main.js
 	build/
