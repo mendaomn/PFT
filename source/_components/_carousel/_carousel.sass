@@ -1,23 +1,110 @@
+@mixin overlay($color)
+  content: ''
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: $color
+  opacity: 0.85
+
 .crsl__Container
   position: relative
+  overflow: hidden
 
   height: 400px
-  background:
-    color: $mainColor
-    image: url(../../assets/img/team.jpeg)
-    position: center
-    size: cover
   color: #fff
 
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
+  &.active-1
+    .crsl__Strip
+      transform: translateX(0)
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:first-child
+          background-color: $accentColor
+
+  &.active-2
+    .crsl__Strip
+      transform: translateX( calc( -100% / 3 ) )
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:nth-child(2)
+          background-color: $accentColor
+
+  &.active-3
+    .crsl__Strip
+      transform: translateX( calc( -200% / 3 ) )
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:nth-child(3)
+          background-color: $accentColor
+  .crsl__Strip
+    display: flex
     height: 100%
-    background-color: $mainColor
-    opacity: 0.85
+    width: 300%
+
+    transition: transform 0.3s ease-in
+
+
+    .crsl__Slide
+      height: 100%
+      width: calc(100% / 3)
+
+      &.slide-1
+        position: relative
+        background:
+          image: url(../../assets/img/team.jpeg)
+          size: cover
+          position: center
+
+        &::before
+          +overlay(#f1c40f)
+
+      &.slide-2
+        position: relative
+        background:
+          image: url(../../assets/img/team.jpeg)
+          size: cover
+          position: center
+
+        &::before
+          +overlay($mainColor)
+
+
+      &.slide-3
+        position: relative
+        background:
+          image: url(../../assets/img/team.jpeg)
+          size: cover
+          position: center
+
+        &::before
+          +overlay(darkcyan)
+
+  .crsl__Controls
+    position: absolute
+    bottom: 20px
+    left: 50%
+    margin-left: -45px
+
+    display: flex
+
+    .crsl__ControlHandle
+      margin-right: 5px
+
+      height: 20px
+      width: 20px
+
+      background-color: #fff
+      border-radius: 50%
+      box-shadow: 0px 0px 5px #333
+
+      &:last-child
+        margin-right: 0
+
 
   .crsl__ContentBox
     height: 400px
@@ -47,3 +134,37 @@
     button
       &:first-child
         margin-right: 20px
+
+
+@media (max-width: 600px)
+  .crsl__Container
+    .crsl__Headline
+      .strong
+        font-size: 3rem
+
+      .weak
+        font-size: 1.5rem
+
+@media (max-width: 480px)
+  .crsl__Container
+    .crsl__Headline
+      .strong
+        font-size: 2.5rem
+
+    .crsl__Actions
+      flex-direction: column
+
+      button
+
+        &:first-child
+          margin-right: 0
+          margin-bottom: 20px
+
+@media (max-width: 410px)
+  .crsl__Container
+    .crsl__Headline
+      .strong
+        font-size: 1.75rem
+
+      .weak
+        font-size: 1rem
