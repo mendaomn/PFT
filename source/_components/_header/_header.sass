@@ -12,6 +12,12 @@ header.hd__Container
     padding: 0
     margin: 0
 
+  .hd__Logo
+    font-size: 3rem
+    color: #34495e
+    font-weight: bold
+    letter-spacing: 0.35rem
+
   .nav__Container
     display: flex
     justify-content: space-around
@@ -23,4 +29,27 @@ header.hd__Container
 
     .active
       color: $mainColor
-      text-decoration: underline
+      font-style: normal
+      font-weight: bold
+      font-size: 1rem
+
+    &.visible
+      position: fixed
+      z-index: 99
+      background: white
+      left: 0
+      top: 75px
+      bottom: 0
+      right: 0
+      flex-direction: column
+
+      font-size: 2rem
+
+      .active
+        font-size: 2rem
+
+  .hd__PhoneNumber
+    font-weight: bold
+
+    .fa-phone
+      margin-right: 5px

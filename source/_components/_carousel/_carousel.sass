@@ -41,13 +41,14 @@
       .crsl__ControlHandle
         &:nth-child(3)
           background-color: $accentColor
+
   .crsl__Strip
     display: flex
     height: 100%
     width: 300%
 
     transition: transform 0.3s ease-in
-
+    will-change: transform
 
     .crsl__Slide
       height: 100%
@@ -61,12 +62,12 @@
           position: center
 
         &::before
-          +overlay(#f1c40f)
+          +overlay(#e50000)
 
       &.slide-2
         position: relative
         background:
-          image: url(../../assets/img/team.jpeg)
+          image: url(../../assets/img/map.jpg)
           size: cover
           position: center
 
@@ -77,12 +78,12 @@
       &.slide-3
         position: relative
         background:
-          image: url(../../assets/img/team.jpeg)
+          image: url(../../assets/img/gym.jpg)
           size: cover
           position: center
 
         &::before
-          +overlay(darkcyan)
+          +overlay(blueviolet)
 
   .crsl__Controls
     position: absolute
@@ -102,6 +103,8 @@
       border-radius: 50%
       box-shadow: 0px 0px 5px #333
 
+      cursor: pointer
+
       &:last-child
         margin-right: 0
 
@@ -114,6 +117,8 @@
     justify-content: center
     align-items: center
     flex-direction: column
+
+    text-align: center
 
     .strong
       margin: 20px 20px
