@@ -1,4 +1,5 @@
 (function() {
+
   var carousel;
   var handles;
   var handlesNumber;
@@ -29,8 +30,5 @@
       carousel.classList.add( "active-" + slideNumber );
     };
   }
-
-
-
 
 }());

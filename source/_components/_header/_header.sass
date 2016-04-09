@@ -33,7 +33,30 @@ header.hd__Container
       font-weight: bold
       font-size: 1rem
 
-    &.visible
+  .hd__PhoneNumber
+    font-weight: bold
+
+    .fa-phone
+      margin-right: 5px
+
+  .hd__Hamburger
+    display: none
+
+    position: absolute
+    right: 0
+    top: 0
+
+    font-size: 2rem
+
+    @media(max-width: 700px)
+      display: inline-block
+
+    .fa-times
+      display: none
+
+  &.visibleNav
+
+    .nav__Container
       position: fixed
       z-index: 99
       background: white
@@ -48,8 +71,13 @@ header.hd__Container
       .active
         font-size: 2rem
 
-  .hd__PhoneNumber
-    font-weight: bold
+      .hd__PhoneNumber
+        display: none
 
-    .fa-phone
-      margin-right: 5px
+    .hd__Hamburger
+
+      .fa-bars
+        display: none
+
+      .fa-times
+        display: inline-block
