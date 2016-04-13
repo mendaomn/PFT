@@ -1,9 +1,9 @@
 header.hd__Container
   background-color: #fff
   box-shadow: 0 0 8px rgba($darkColor, 0.3)
-  // overflow: auto
+  overflow: hidden
 
-  height: 75px
+  min-height: 75px
   line-height: 75px
 
   font-size: 0.8rem
@@ -11,6 +11,10 @@ header.hd__Container
   p, ul
     padding: 0
     margin: 0
+
+  a
+    text-decoration: none
+    color: inherit
 
   .hd__Logo
     font-size: 3rem
@@ -47,6 +51,8 @@ header.hd__Container
     top: 0
 
     font-size: 2rem
+
+    cursor: pointer
 
     @media(max-width: 700px)
       display: inline-block
