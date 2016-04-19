@@ -21,6 +21,9 @@
 
   }
 
-  initMap();
+  // Check correct API load
+  if ( typeof google !== "undefined" ) {
+    initMap();
+  }
 
 }());

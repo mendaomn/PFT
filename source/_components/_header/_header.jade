@@ -6,16 +6,28 @@ header.hd__Container
           a(href="/index.html") PFT
       .grid__col.grid__col--4-of-5
         ul.nav__Container
-          li.active
+          li(class=(page === "HOME") ? "active" : "")
             a(href="/index.html") Home
-          li About
-          li Servizi
-          li Società
-          li 
+          
+          li(class=(page === "ABOUT") ? "active" : "")
+            a(href="/pages/about.html") About
+            
+          li(class=(page === "Staff") ? "active" : "")
+            a(href="/pages/staff.html") Staff
+          
+          li(class=(page === "SERVIZI") ? "active" : "")
+            a(href="/pages/servizi.html") Servizi
+          
+          li(class=(page === "SOCIETA") ? "active" : "")
+            a(href="/pages/societa.html") Società
+          
+          li(class=(page === "APPROFONDIMENTI") ? "active" : "") 
             a(href="/pages/approfondimenti.html") Approfondimenti
+            
           li.hd__PhoneNumber 
             i.fa.fa-phone
             | +39 346 753 17 97
+    
     p.hd__Hamburger
-      i.fa.fa-bars
       i.fa.fa-times
+      i.fa.fa-bars

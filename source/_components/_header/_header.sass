@@ -8,6 +8,22 @@ header.hd__Container
 
   font-size: 0.8rem
 
+  &.dark
+    background-color: $darkColor
+    color: white
+
+    .hd__Logo
+      color: $accentColor
+
+    .nav__Container
+
+      .active
+        color: $accentColor
+
+    &.visibleNav
+      .nav__Container
+        background-color: $darkColor
+
   p, ul
     padding: 0
     margin: 0
@@ -18,7 +34,7 @@ header.hd__Container
 
   .hd__Logo
     font-size: 3rem
-    color: #34495e
+    color: $mainColor
     font-weight: bold
     letter-spacing: 0.35rem
 
