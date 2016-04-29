@@ -1,0 +1,48 @@
+.srv__Container
+
+  .srv__Title
+    +pageTitle()
+
+  .srv__Subtitle
+    +pageSubtitle()
+
+  .srv__Strip
+    position: relative
+    overflow: auto
+    margin-bottom: 15px
+    height: 400px
+    background:
+      image: url(../assets/img/servizi.jpg)
+      position: center top
+      size: cover
+    color: #fff
+
+    &::before
+      +overlay($mainColor)
+
+    .flex.vertical.center
+      height: 400px
+
+    .srv__Headline
+      text-align: center
+
+  .srv__Servizi
+
+    .tile
+      margin-bottom: 15px
+
+    .srv__Servizio
+      text-align: center
+
+      .srv__Servizio__Pic
+
+      .srv__Servizio__Title
+        color: $mainColor
+
+      .srv__Servizio__List
+        list-style: none
+        padding: 0
+        margin: 0
+
+        li
+          line-height: 1.5rem
