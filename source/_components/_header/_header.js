@@ -3,11 +3,11 @@
   var header;
   var hamburger;
 
-  document.addEventListener("DOMContentLoaded", headerInit );
+  document.addEventListener( "DOMContentLoaded", headerInit );
 
   function headerInit() {
-    header = document.querySelectorAll(".hd__Container")[ 0 ];
-    hamburger = document.querySelectorAll(".hd__Hamburger")[ 0 ];
+    header = document.querySelectorAll( ".hd__Container" )[ 0 ];
+    hamburger = document.querySelectorAll( ".hd__Hamburger" )[ 0 ];
 
     bindListeners();
   }
@@ -18,6 +18,7 @@
 
   function toggleNav( e ) {
     header.classList.toggle( "visibleNav" );
+    document.body.classList.toggle( "stopScrolling" );
   }
 
-}());
+}() );
