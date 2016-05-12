@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet', href='../vendor/css/toast.css', charset='utf-8')
+    link(rel='stylesheet', href='dovesiamo.css', charset='utf-8')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    title PFT
+  body.flex.vertical
+    != partial('../_components/_header/_header', { page: "DOVESIAMO" })
+    .flex1
+      != partial('../_components/_dovesiamo/_dovesiamo')
+      != partial('../_components/_sponsors/_sponsors')
+      != partial('../_components/_footer/_footer')
+    script(src="https://maps.googleapis.com/maps/api/js")
+    script(src="../assets/js/main.min.js")
