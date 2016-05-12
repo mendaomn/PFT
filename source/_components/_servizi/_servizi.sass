@@ -31,10 +31,56 @@
     .tile
       margin-bottom: 15px
 
+      &.fullHeight
+        height: 456px
+
     .srv__Servizio
       text-align: center
 
       .srv__Servizio__Pic
+        margin-bottom: 15px
+
+        img
+          max-width: 100%
+          height: 100px
+
+      &.horizontal
+
+        .srv__Servizio__ContentWrapper
+          display: flex
+          justify-content: center
+          align-items: center
+
+          .srv__Servizio__Pic
+            img
+              //padding-right: 15px
+              width: 100px
+              max-width: calc(100% - 15px)
+              height: auto
+
+      @media (max-width: 1000px)
+        .srv__Servizio__ContentWrapper
+          .srv__Servizio__List
+            font-size: 0.85rem
+
+      @media (min-width: 700px) and (max-width: 900px)
+        .srv__Servizio__Title
+          font-size: 1rem
+
+        .srv__Servizio__ContentWrapper
+          .srv__Servizio__Pic
+            img
+              height: 80px
+
+          .srv__Servizio__List
+            font-size: 0.75rem
+
+        &.horizontal
+          min-height: 218px
+
+          .srv__Servizio__ContentWrapper
+            .srv__Servizio__Pic
+              display: none
 
       .srv__Servizio__Title
         color: $mainColor
@@ -44,5 +90,67 @@
         padding: 0
         margin: 0
 
+        min-width: 168px
+
         li
           line-height: 1.5rem
+
+    @media(max-width: 500px)
+
+      .srv__Servizio
+
+        .srv__Servizio__ContentWrapper
+
+          .srv__Servizio__Pic
+            display: none
+
+    @media(max-width: 700px)
+
+      .tile
+        margin-bottom: 15px
+
+        &.fullHeight
+          height: auto
+
+      .srv__Servizio
+
+        .srv__Servizio__ContentWrapper
+          display: flex
+          justify-content: space-around
+          align-items: center
+
+          .srv__Servizio__Pic
+            img
+              //padding-right: 15px
+              width: 140px
+              max-width: calc(100% - 15px)
+              height: auto
+
+          .srv__Servizio__List
+            font-size: 1rem
+
+        &.horizontal
+
+          .srv__Servizio__ContentWrapper
+            justify-content: space-around
+
+            .srv__Servizio__Pic
+
+              img
+                width: 140px
+
+@media (max-width: 600px)
+  .srv__Container
+    .srv__Title
+      font-size: 3rem
+
+@media (max-width: 480px)
+  .srv__Container
+    .srv__Title
+      font-size: 2.5rem
+
+
+@media (max-width: 410px)
+  .srv__Container
+    .srv__Title
+      font-size: 1.75rem

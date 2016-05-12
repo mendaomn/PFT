@@ -10,51 +10,60 @@
     .wrapper
       .grid
         .grid__col.grid__col--1-of-3
-          .tile.srv__Servizio.flex.vertical.center
-            img.srv__Servizio__Pic(src="../assets/img/health.png" alt="")
+          .tile.fullHeight.srv__Servizio
             h3.srv__Servizio__Title Medicina
-            ul.srv__Servizio__List
-              li Visite specialistiche ortopediche
-              li Visite specialistiche ortopedia pediatrica
-              li Ecografia
-              li Valutazione posturale
-              li Valutazione funzionale motoria
-              li Valutazione biomeccanica della pedalata
+            .srv__Servizio__ContentWrapper
+              .srv__Servizio__Pic
+                img(src="../assets/img/health.png" alt="")
+              ul.srv__Servizio__List
+                li Visita ortopedica
+                li Visita ortopedica pediatrica
+                li Valutazione posturale
+                li Valutazione della motricità
+                li Valutazione fisioterapica
+                li Analisi biomeccanica della pedalata
             
         .grid__col.grid__col--1-of-3
-          .tile.srv__Servizio.flex.vertical.center
-            img.srv__Servizio__Pic(src="../assets/img/health.png" alt="")
+          .tile.fullHeight.srv__Servizio
             h3.srv__Servizio__Title Trattamenti manuali
-            ul.srv__Servizio__List
-              li Trattamenti osteopatici
-              li Terapia manuale
-              li Massoterapia
-              li Linfoterapia
-              li Bendaggio funzionale
-              li Chinesiterapia
-              li Fibrolisi
-              li Dry Needling
-              li Fisioterapia perineale
-              
+            .srv__Servizio__ContentWrapper
+              .srv__Servizio__Pic
+                img(src="../assets/img/massage.png" alt="")
+              ul.srv__Servizio__List
+                li Osteopatia e manipolazioni
+                li Massoterapia
+                li Massaggio decontratturante
+                li Massaggio fasciale e/o connettivale
+                li Linfodrenaggio
+                li Bendaggio funzionale e kinesiotaping
+                li Terapia perineale
+                li Dry Needling
+                li Fibrolisi
+
         .grid__col.grid__col--1-of-3
           .grid__col--1-of-1
-            .tile.srv__Servizio.flex.vertical.center
-              img.srv__Servizio__Pic(src="../assets/img/health.png" alt="")
-              h3.srv__Servizio__Title Terapie strumentali
+          .tile.srv__Servizio.horizontal
+            h3.srv__Servizio__Title Terapie strumentali
+            .srv__Servizio__ContentWrapper
+              .srv__Servizio__Pic
+                img(src="../assets/img/therapy.png" alt="")
               ul.srv__Servizio__List
                 li Tecarterapia
                 li Laserterapia
+                li Ultrasuono terapia
                 li Tens
                 li Elettroterapia
-                li Ultrasuono
                 li Magnetoterapia
                 
           .grid__col--1-of-1
-            .tile.srv__Servizio.flex.vertical.center
-              img.srv__Servizio__Pic(src="../assets/img/health.png" alt="")
-              h3.srv__Servizio__Title Riabilitazione in palestra
-              ul.srv__Servizio__List
-                li Riabilitazione
-                li Riatletizzazione
-                li Lavoro preventivo
-                li Lavoro prestativo
+            .tile.srv__Servizio.horizontal
+              h3.srv__Servizio__Title Chinesiterapia
+              .srv__Servizio__ContentWrapper
+                .srv__Servizio__Pic
+                  img(src="../assets/img/gym.png" alt="")
+                ul.srv__Servizio__List
+                  li Riabilitazione in palestra
+                  li Ginnastica posturale
+                  li Riatletizzazione
+                  li Prevenzione infortuni
+                  li Lavoro prestativo
