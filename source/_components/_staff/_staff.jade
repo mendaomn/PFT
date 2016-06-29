@@ -1,0 +1,18 @@
+.staff__Container
+  .staff__Strip
+    .wrapper
+      .flex.vertical.center
+        .staff__Headline
+          h2.staff__Title Conosci il nostro Staff
+          // p.staff__Subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quis natus quod, odit quisquam, cumque suscipit. Praesentium soluta, expedita repellendus.
+
+  .wrapper
+    .row.staff__List
+      - for (var x = 1; x < 16; x++)
+        .col__6-12.col__md-12-12.col__sm-12-12
+          .staff__Member 
+            .staff__Member__Pic
+              img(src="../assets/img/avatar.jpg", alt="")
+            .staff__Member__Info
+              .staff__Member__Name Leonardo Pinto
+              .staff__Member__Skills Fisioterapista, chinesiologista, osteopata, dryneedler, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quia.

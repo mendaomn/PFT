@@ -1,0 +1,63 @@
+@import "../_tile/_tile"
+
+.staff__Container
+
+  .staff__Title
+    +pageTitle()
+
+  .staff__Subtitle
+    +pageSubtitle()
+
+  .staff__Strip
+    position: relative
+    overflow: auto
+    margin-bottom: 15px
+    height: 400px
+    background:
+      image: url(../assets/img/staff.jpeg)
+      position: center top
+      size: cover
+    color: #fff
+
+    &::before
+      +overlay($mainColor)
+
+    .flex.vertical.center
+      height: 400px
+
+    .staff__Headline
+      text-align: center
+
+  .staff__List
+
+    .staff__Member
+      @extend .tile
+
+      .staff__Member__Pic
+        overflow: hidden
+        float: left
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        margin-right: 15px
+
+        img
+          max-width: 100%
+          height: auto
+
+      .staff__Member__Info
+        height: 150px
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        .staff__Member__Name
+          font-size: 1.75rem
+          text-transform: uppercase
+          font-weight: bold
+          color: $mainColor
+
+        .staff__Member__Skills
+          font-size: 0.85rem
+          margin-top: 15px
+          color: lighten($darkColor, 20)
