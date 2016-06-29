@@ -1,5 +1,39 @@
 @import "../_components/_tile/_tile"
+@import "../_style/_partials/_stretch"
 
 section.spnr__Container
   background-color: $lightColor
-  padding-bottom: 15px
+
+  .spnr__Title
+    @extend .flex
+    @extend .center
+    padding: 7px 0
+    background-color: $lightColor
+    color: $darkColor
+    // margin: 25px 0
+    font-size: 1rem
+
+  .spnr__Strip
+    @extend .flex
+    @extend .center
+    flex-wrap: wrap
+    background-color: #fff
+    padding-bottom: 15px
+
+    .spnr__Logo__Container
+      @extend .flex
+      @extend .center
+      height: 125px
+      width: 140px
+      overflow: hidden
+      padding: 10px
+
+      img
+        max-width: 100%
+        max-height: 100%
+
+  @media (max-width: 480px)
+    .spnr__Strip
+
+      .spnr__Logo__Container
+        width: 100px      

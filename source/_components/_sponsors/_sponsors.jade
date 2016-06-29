@@ -1,15 +1,8 @@
 section.spnr__Container
-  .wrapper
-    .grid
-      .grid__col.grid__col--5-of-5
-        h3 I nostri sponsor
-        
-    .gd__Container
-      .gd__Cell.tile
-        img(src="../../assets/img/adidas.png")
-      .gd__Cell.tile
-        img(src="../../assets/img/adidas.png")
-      .gd__Cell.tile
-        img(src="../../assets/img/adidas.png")
-      .gd__Cell.tile
-        img(src="../../assets/img/adidas.png")
+  .spnr__Title
+    h3 I nostri sponsor
+
+  .spnr__Strip
+    for logo in public.assets.img.logos._contents
+      .spnr__Logo__Container
+        img(src="../../assets/img/logos/#{ logo }")
