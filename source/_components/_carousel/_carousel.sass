@@ -1,4 +1,4 @@
-
+$numberOfSlides: 5
 
 .crsl__Container
   position: relative
@@ -18,7 +18,7 @@
 
   &.active-2
     .crsl__Strip
-      transform: translateX( calc( -100% / 3 ) )
+      transform: translateX( -100% / $numberOfSlides )
 
     .crsl__Controls
       .crsl__ControlHandle
@@ -27,24 +27,42 @@
 
   &.active-3
     .crsl__Strip
-      transform: translateX( calc( -200% / 3 ) )
+      transform: translateX( -200% / $numberOfSlides )
 
     .crsl__Controls
       .crsl__ControlHandle
         &:nth-child(3)
           background-color: $accentColor
 
+  &.active-4
+    .crsl__Strip
+      transform: translateX( -300% / $numberOfSlides )
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:nth-child(4)
+          background-color: $accentColor
+
+  &.active-5
+    .crsl__Strip
+      transform: translateX( -400% / $numberOfSlides )
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:nth-child(5)
+          background-color: $accentColor
+
   .crsl__Strip
     display: flex
     height: 100%
-    width: 300%
+    width: 100% * $numberOfSlides
 
     transition: transform 0.3s ease-in
     will-change: transform
 
     .crsl__Slide
       height: 100%
-      width: calc(100% / 3)
+      width: 100% / $numberOfSlides
 
       &.slide-1
         position: relative
@@ -77,11 +95,31 @@
         &::before
           +overlay(blueviolet)
 
+      &.slide-4
+        position: relative
+        background:
+          image: url(../../assets/img/servizi.jpg)
+          size: cover
+          position: top center
+
+        &::before
+          +overlay($mainColor)
+
+      &.slide-5
+        position: relative
+        background:
+          image: url(../../assets/img/servizi.jpg)
+          size: cover
+          position: top center
+
+        &::before
+          +overlay($mainColor)
+
   .crsl__Controls
     position: absolute
     bottom: 20px
     left: 50%
-    margin-left: -45px
+    margin-left: -75px
 
     display: flex
 
