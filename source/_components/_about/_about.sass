@@ -1,4 +1,5 @@
 .about__Container
+  background-color: #fff
 
   .about__Title
     +pageTitle()
@@ -9,10 +10,9 @@
   .about__Strip
     position: relative
     overflow: auto
-    margin-bottom: 15px
     height: 400px
     background:
-      image: url(../assets/img/servizi.jpg)
+      image: url(../assets/img/about.jpg)
       position: center top
       size: cover
     color: #fff
@@ -26,20 +26,52 @@
     .about__Headline
       text-align: center
 
+  .about__LogoStrip
+    margin-top: 25px
+    padding: 10px
+
+    .about__Logo
+      cursor: pointer
+      max-width: 150px
+
+      img
+        max-width: 100%
+
+      &:hover
+        opacity: 0.4
+
+      &:not(:last-child)
+        margin-right: 15px
+
+  .about__Text__SectionTitle
+    @extend .flex
+    @extend .center
+    padding: 25px 0
+    background-color: $mainColor
+    color: #fff
+    margin: 25px 0
+    font-size: 2rem
+
   .about__Text
-    text-align: justify
+    padding: 50px 0
     line-height: 1.5rem
     font-size: 1.15rem
 
     p
+      order: 1
+      line-height: 27px
+      margin-left: 20px
+      margin-right: 20px
       margin-top: 0
 
     img
-      max-width: 300px
+      max-width: 200px
       width: 100%
       height: 100%
+      margin: -40px 40px 0 40px
 
   @media (max-width: 700px)
     .about__Text
+      padding: 0
       img
         display: none
