@@ -1,74 +1,25 @@
-.appr__Container
+.appr__Container(ng-app="ApprApp")
   .wrapper
-    h2.appr__Title Video
-    
-    .grid
+    div(ng-controller="VideosCtrl")
+      .flex.center.between
+        h2.appr__Title Video
+        span(ng-click="quantity = false") Vedi tutti
+      
       .appr__Videos
-      
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-                
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-                
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
+        .row
+          .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="video in videos | limitTo: quantity")
+            a.appr__Video.tile(target="_blank" href="https://www.youtube.com/watch?v={{video.snippet.resourceId.videoId}}")
+              p.video__Title {{ video.snippet.title }}
+              .video__Thumb(style="background-image:url({{video.snippet.thumbnails.high.url}})")
     
-    h2.appr__Title Articoli
-
-    .grid
+    div(ng-controller="ArticlesCtrl")
+      .flex.center.between
+        h2.appr__Title Articoli
+        span(ng-click="quantity = false") Vedi tutti
+    
       .appr__Articles
-      
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-                
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-            
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-                
-        .grid__col.grid__col--1-of-3
-          .appr__Video.tile
-            p.video__Title L'osteopatia nel calcio
-            img.video__Thumb(src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1rYGuVl_gw603hyZbFA6edGxK4mIdc-sljazIPr2YgR1S7cSX")
-        
+        .row          
+          .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="article in articles | limitTo: quantity")
+            a.appr__Video.tile(target="_blank" href="{{article.post_url}}")
+              p.video__Title {{ article.summary }}
+              .video__Thumb(style="background-image:url({{article.photos[0].alt_sizes[2].url}})")
