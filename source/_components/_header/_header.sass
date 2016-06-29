@@ -1,4 +1,5 @@
 header.hd__Container
+  position: relative
   background-color: #fff
   box-shadow: 0 0 8px rgba($darkColor, 0.3)
   overflow: hidden
@@ -33,11 +34,11 @@ header.hd__Container
     color: inherit
 
   .hd__Logo
+    padding: 10px 0
     height: 75px
 
     img
       max-height: 100%
-      margin-left: -25px
 
   .nav__Container
     display: flex
@@ -46,10 +47,7 @@ header.hd__Container
 
     list-style: none
 
-    font-style: italic
-
-    li
-      line-height: 1rem
+    // font-style: italic
 
     .active
       color: $mainColor
@@ -93,6 +91,9 @@ header.hd__Container
       flex-direction: column
 
       font-size: 2rem
+
+      li
+        line-height: 1rem
 
       .active
         font-size: 2rem
