@@ -1,0 +1,57 @@
+@import "../_style/_partials/_stretch"
+
+.soc__Container
+
+  .soc__Title
+    +pageTitle()
+
+  .soc__Subtitle
+    +pageSubtitle()
+
+  .soc__Strip
+    position: relative
+    overflow: auto
+    margin-bottom: 15px
+    height: 400px
+    background:
+      image: url(../assets/img/staff.jpeg)
+      position: center top
+      size: cover
+    color: #fff
+
+    &::before
+      +overlay(#e5262d)
+
+    .flex.vertical.center
+      height: 400px
+
+    .soc__Headline
+      text-align: center
+
+  .soc__TextStrip
+    padding: 25px 0
+
+    .wrapper
+      // max-width: 700px
+
+      .row
+        [class*="col__"]
+          padding: 0 25px
+
+
+    p
+      line-height: 27px
+      font-size: 1.15rem
+
+
+
+  .soc__PicStrip
+    position: relative
+    overflow: auto
+    margin-bottom: 15px
+    height: 400px
+    background:
+      // image: url(../assets/img/staff.jpeg)
+      position: center
+      size: cover
+    color: #fff
