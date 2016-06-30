@@ -3,7 +3,7 @@
     div(ng-controller="VideosCtrl")
       .flex.center.between
         h2.appr__Title Video
-        span(ng-click="quantity = false") Vedi tutti
+        span(ng-click="quantity = quantity ? false : 6") Vedi tutti
       
       .appr__Videos
         .row
@@ -15,7 +15,7 @@
     div(ng-controller="ArticlesCtrl")
       .flex.center.between
         h2.appr__Title Articoli
-        span(ng-click="quantity = false") Vedi tutti
+        span(ng-click="quantity = quantity ? false : 6") Vedi tutti
     
       .appr__Articles
         .row          
