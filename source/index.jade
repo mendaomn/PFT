@@ -11,6 +11,6 @@ html
     != partial('_components/_header/_header', { page: 'HOME' })
     .flex1
       != partial('_components/_carousel/_carousel')
-      != partial('_components/_sponsors/_sponsors')
+      != partial('_components/_sponsors/_sponsors', { page: 'HOME' })
       != partial('_components/_footer/_footer')
     script(src="assets/js/main.min.js")

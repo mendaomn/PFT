@@ -1,3 +1,8 @@
+if page === "HOME"
+  - var prefix = "."
+else
+  - var prefix = ".."
+  
 section.spnr__Container
   .spnr__Title
     h3 I nostri sponsor
@@ -5,4 +10,4 @@ section.spnr__Container
   .spnr__Strip
     for logo in public.assets.img.logos._contents
       .spnr__Logo__Container
-        img(src="../../assets/img/logos/#{ logo }")
+        img(src= prefix + "/assets/img/logos/#{ logo }")
