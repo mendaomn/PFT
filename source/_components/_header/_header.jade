@@ -1,32 +1,37 @@
+if page === "HOME"
+  - var prefix = "."
+else
+  - var prefix = ".."
+
 header.hd__Container
   .wrapper
     .grid
       .grid__col.grid__col--1-of-8
         p.hd__Logo 
-          a(href="/index.html")
-            img(src="/assets/img/pft.png", alt="")
+          a(href=prefix + "/index.html")
+            img(src= prefix + "/assets/img/pft.png", alt="")
       .grid__col.grid__col--7-of-8
         ul.nav__Container
           li(class=(page === "HOME") ? "active" : "")
-            a(href="/index.html") Home
+            a(href= prefix + "/index.html") Home
           
           li(class=(page === "ABOUT") ? "active" : "")
-            a(href="/pages/about.html") About
+            a(href= prefix + "/pages/about.html") About
           
           li(class=(page === "SERVIZI") ? "active" : "")
-            a(href="/pages/servizi.html") Servizi
+            a(href= prefix + "/pages/servizi.html") Servizi
           
           li(class=(page === "DOVESIAMO") ? "active" : "")
-            a(href="/pages/dovesiamo.html") Dove siamo
+            a(href= prefix + "/pages/dovesiamo.html") Dove siamo
             
           li(class=(page === "STAFF") ? "active" : "")
-            a(href="/pages/staff.html") Staff
+            a(href= prefix + "/pages/staff.html") Staff
             
           li(class=(page === "SOCIETA") ? "active" : "")
-            a(href="/pages/societa.html") Società
+            a(href= prefix + "/pages/societa.html") Società
           
           li(class=(page === "APPROFONDIMENTI") ? "active" : "") 
-            a(href="/pages/approfondimenti.html") Approfondimenti
+            a(href= prefix + "/pages/approfondimenti.html") Approfondimenti
             
           li.hd__PhoneNumber 
             i.fa.fa-phone
