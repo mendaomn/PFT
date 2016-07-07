@@ -39,7 +39,7 @@
           padding: 0 25px
 
 
-    p
+    p, li
       line-height: 27px
       font-size: 1.15rem
 
@@ -48,6 +48,8 @@
   .soc__PicStrip
     position: relative
     overflow: auto
+    display: flex
+    align-items: flex-end
     margin-bottom: 15px
     height: 400px
     background:
@@ -55,3 +57,12 @@
       position: center
       size: cover
     color: #fff
+
+
+    .soc__PicStrip__Title
+      flex: 1
+      background-color: rgba($mainColor, 0.85)
+      color: #fff
+      //margin-bottom: 25px
+      padding: 50px 0
+      font-size: 2rem

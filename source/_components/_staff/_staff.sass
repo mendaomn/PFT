@@ -36,8 +36,8 @@
       .staff__Member__Pic
         overflow: hidden
         float: left
-        width: 150px
-        height: 150px
+        width: 120px
+        height: 120px
         border-radius: 50%
         margin-right: 15px
 
@@ -46,18 +46,35 @@
           height: auto
 
       .staff__Member__Info
-        height: 150px
+        height: 120px
+        // margin: 10px 0
         display: flex
         flex-direction: column
         justify-content: center
 
         .staff__Member__Name
-          font-size: 1.75rem
+          font-size: 1.5rem
           text-transform: uppercase
           font-weight: bold
           color: $mainColor
 
         .staff__Member__Skills
-          font-size: 0.85rem
+          font-size: 0.75rem
           margin-top: 15px
           color: lighten($darkColor, 20)
+
+    @media(max-width: 480px)
+      .staff__Member
+
+        .staff__Member__Pic
+          float: none
+          margin: 0 auto
+
+          img
+
+        .staff__Member__Info
+          text-align: center
+
+          .staff__Member__Name
+
+          .staff__Member__Skills

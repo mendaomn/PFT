@@ -1,10 +1,12 @@
-$numberOfSlides: 5
+$carouselHeight: 400px
+$carouselHeightLaptop: calc(100vh - 75px)
+$numberOfSlides: 6
 
 .crsl__Container
   position: relative
   overflow: hidden
 
-  height: 400px
+  height: $carouselHeightLaptop
   color: #fff
 
   &.active-1
@@ -52,6 +54,15 @@ $numberOfSlides: 5
         &:nth-child(5)
           background-color: $accentColor
 
+  &.active-6
+    .crsl__Strip
+      transform: translateX( -500% / $numberOfSlides )
+
+    .crsl__Controls
+      .crsl__ControlHandle
+        &:nth-child(6)
+          background-color: $accentColor
+
   .crsl__Strip
     display: flex
     height: 100%
@@ -67,9 +78,9 @@ $numberOfSlides: 5
       &.slide-1
         position: relative
         background:
-          image: url(../../assets/img/team.jpeg)
+          image: url(../assets/img/team.jpg)
           size: cover
-          position: center
+          position: top center
 
         &::before
           +overlay(#e50000)
@@ -77,7 +88,7 @@ $numberOfSlides: 5
       &.slide-2
         position: relative
         background:
-          image: url(../../assets/img/map.jpg)
+          image: url(../assets/img/map.jpg)
           size: cover
           position: center
 
@@ -88,17 +99,17 @@ $numberOfSlides: 5
       &.slide-3
         position: relative
         background:
-          image: url(../../assets/img/gym.jpg)
+          image: url(../assets/img/medicalcenter.jpg)
           size: cover
           position: center
 
         &::before
-          +overlay(blueviolet)
+          +overlay($darkColor)
 
       &.slide-4
         position: relative
         background:
-          image: url(../../assets/img/servizi.jpg)
+          image: url(../assets/img/servizi.jpg)
           size: cover
           position: top center
 
@@ -108,9 +119,19 @@ $numberOfSlides: 5
       &.slide-5
         position: relative
         background:
-          image: url(../../assets/img/servizi.jpg)
+          image: url(../assets/img/videosport.jpg)
           size: cover
           position: top center
+
+        &::before
+          +overlay($redColor)
+
+      &.slide-6
+        position: relative
+        background:
+          image: url(../assets/img/about.jpg)
+          size: cover
+          position: center top
 
         &::before
           +overlay($mainColor)
@@ -140,7 +161,7 @@ $numberOfSlides: 5
 
 
   .crsl__ContentBox
-    height: 400px
+    height: $carouselHeightLaptop
 
   .crsl__Headline
     display: flex
@@ -170,6 +191,12 @@ $numberOfSlides: 5
       &:first-child
         margin-right: 20px
 
+@media (max-width: 1024px)
+  .crsl__Container
+    height: $carouselHeight
+
+    .crsl__ContentBox
+      height: $carouselHeight
 
 @media (max-width: 600px)
   .crsl__Container
