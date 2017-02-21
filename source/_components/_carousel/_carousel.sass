@@ -1,6 +1,6 @@
 $carouselHeight: 400px
 $carouselHeightLaptop: calc(100vh - 75px)
-$numberOfSlides: 6
+$numberOfSlides: 5
 
 .crsl__Container
   position: relative
@@ -75,66 +75,69 @@ $numberOfSlides: 6
       height: 100%
       width: 100% / $numberOfSlides
 
+      &::before
+        +overlay($darkColor)
+
       &.slide-1
         position: relative
         background:
-          image: url(../assets/img/team.jpg)
-          size: cover
-          position: top center
-
-        &::before
-          +overlay(#e50000)
-
-      &.slide-2
-        position: relative
-        background:
-          image: url(../assets/img/map.jpg)
+          image: url(../assets/img/gymroom.jpg)
           size: cover
           position: center
 
         &::before
-          +overlay($mainColor)
+          // +overlay(#e50000)
+
+      &.slide-2
+        position: relative
+        background:
+          image: url(../assets/img/redroom.jpg)
+          size: cover
+          position: center
+
+        &::before
+          // +overlay($mainColor)
 
 
       &.slide-3
         position: relative
         background:
-          image: url(../assets/img/medicalcenter.jpg)
+          image: url(../assets/img/frontoffice.jpg)
           size: cover
           position: center
 
         &::before
-          +overlay($darkColor)
+          // +overlay($darkColor)
 
       &.slide-4
         position: relative
         background:
           image: url(../assets/img/servizi.jpg)
           size: cover
-          position: top center
+          position: center
 
         &::before
-          +overlay($mainColor)
+          // +overlay($mainColor)
 
       &.slide-5
         position: relative
         background:
-          image: url(../assets/img/videosport.jpg)
+          image: url(../assets/img/zenroom.jpg)
           size: cover
-          position: top center
+          position: center
 
         &::before
-          +overlay($redColor)
+          // +overlay($redColor)
 
       &.slide-6
         position: relative
         background:
-          image: url(../assets/img/about.jpg)
+          image: url(../assets/img/frontdoor.jpg)
           size: cover
-          position: center top
+          position: center bottom
 
         &::before
-          +overlay($mainColor)
+          // +overlay($mainColor)
 
   .crsl__Controls
     position: absolute
@@ -172,10 +175,12 @@ $numberOfSlides: 6
     text-align: center
 
     .strong
+      // +pageTitle()
       margin: 20px 20px
       font-size: 4rem
 
     .weak
+      // +pageSubtitle()
       margin: 0
       text-transform: uppercase
       font-size: 2rem
@@ -198,6 +203,13 @@ $numberOfSlides: 6
     .crsl__ContentBox
       height: $carouselHeight
 
+    .crsl__Headline
+      .strong
+        +pageTitle()
+
+      .weak
+        +pageSubtitle()
+
 @media (max-width: 600px)
   .crsl__Container
     .crsl__Headline
@@ -212,6 +224,8 @@ $numberOfSlides: 6
     .crsl__Headline
       .strong
         font-size: 2.5rem
+      .weak
+        font-size: 1.25rem
 
     .crsl__Actions
       flex-direction: column
