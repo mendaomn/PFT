@@ -1,0 +1,27 @@
+{
+  "name": "PFT",
+  "version": "1.0.0",
+  "description": "Professional website for the PFT physiotherapic center",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-image-resize": "^0.9.0",
+    "gulp-imagemin": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "harp server source",
+    "build": "harp compile source build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendaomn/PFT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mendaomn/PFT/issues"
+  },
+  "homepage": "https://github.com/mendaomn/PFT#readme"
+}
