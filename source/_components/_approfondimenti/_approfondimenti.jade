@@ -1,10 +1,16 @@
 .appr__Container(ng-app="ApprApp")
-  .wrapper
-    div(ng-controller="VideosCtrl")
-      .flex.center.between
-        h2.appr__Title Video
-        span(ng-click="quantity = quantity ? false : 6") Vedi tutti
-      
+  .appr__Strip
+    .wrapper
+      .flex.vertical.center
+        .appr__Headline
+          h2.appr__Title I nostri video
+          p.appr__Subtitle Disponiamo in struttura di uno staff di 20 specialisti e ci avvaliamo delle più innovative strumentazioni in campo medico-riabilitativo
+  div(ng-controller="VideosCtrl")
+    .wrapper
+      //- .flex.center.between
+      //-   h2.appr__Title Video
+      //-   span(ng-click="quantity = quantity ? false : 6") Vedi tutti
+      //- 
       .appr__Videos
         .row
           .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="video in videos | limitTo: quantity")
@@ -12,11 +18,15 @@
               p.video__Title {{ video.snippet.title }}
               .video__Thumb(style="background-image:url({{video.snippet.thumbnails.high.url}})")
     
-    div(ng-controller="ArticlesCtrl")
-      .flex.center.between
-        h2.appr__Title Articoli
-        span(ng-click="quantity = quantity ? false : 6") Vedi tutti
-    
+  .appr__Strip
+    .wrapper
+      .flex.vertical.center
+        .appr__Headline
+          h2.appr__Title I nostri articoli
+          p.appr__Subtitle Disponiamo in struttura di uno staff di 20 specialisti e ci avvaliamo delle più innovative strumentazioni in campo medico-riabilitativo
+  
+  div(ng-controller="ArticlesCtrl")
+    .wrapper
       .appr__Articles
         .row          
           .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="article in articles | limitTo: quantity")

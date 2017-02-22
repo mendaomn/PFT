@@ -3,6 +3,36 @@
   .appr__Title
     +pageTitle()
 
+  .appr__Subtitle
+    +pageSubtitle()
+
+  .appr__Strip
+    position: relative
+    overflow: auto
+    margin-bottom: 15px
+    height: 400px
+    background:
+      image: url(../assets/img/gymroom.jpg)
+      position: center
+      size: cover
+    color: #fff
+
+    &::before
+      +overlay($darkColor)
+
+    .flex.vertical.center
+      height: 400px
+
+    .appr__Headline
+      text-align: center
+
+  .appr__Videos,
+  .appr__Articles
+    padding: 50px 0
+
+  .appr__Articles
+    padding-bottom: 0
+
   .appr__Video
     display: flex
     flex-direction: column
