@@ -17,6 +17,9 @@
             a.appr__Video.tile(target="_blank" href="https://www.youtube.com/watch?v={{video.snippet.resourceId.videoId}}")
               p.video__Title {{ video.snippet.title }}
               .video__Thumb(style="background-image:url({{video.snippet.thumbnails.high.url}})")
+        .row
+          .flex.vertical.center
+            button.cta.strong(ng-click="quantity = quantity ? false : 6") Vedi tutti
     
   .appr__Strip
     .wrapper
@@ -33,3 +36,6 @@
             a.appr__Video.tile(target="_blank" href="{{article.post_url}}")
               p.video__Title {{ article.summary }}
               .video__Thumb(style="background-image:url({{article.photos[0].alt_sizes[2].url}})")
+        .row
+          .flex.vertical.center
+            button.cta.strong(ng-click="quantity = quantity ? false : 6") Vedi tutti
