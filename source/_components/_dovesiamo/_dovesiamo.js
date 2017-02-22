@@ -9,14 +9,14 @@
     mapDiv = document.getElementById( "map" );
 
     map = new google.maps.Map( mapDiv, {
-      center: { lat: 45.115115, lng: 7.651363 },
-      zoom: 14
+      center: { lat: 45.105908, lng: 7.644952 },
+      zoom: 18
     });
 
     marker = new google.maps.Marker({
-      position: { lat: 45.115115, lng: 7.651363 },
+      position: { lat: 45.105908, lng: 7.644952 },
       map: map,
-      title: "Hello World!"
+      title: "PFT"
     });
 
   }
