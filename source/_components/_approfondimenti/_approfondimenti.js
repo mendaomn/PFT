@@ -44,7 +44,7 @@
     app.controller( "ArticlesCtrl", [ "$scope", "$http", function( $scope, $http ) {
       $scope.quantity = 6;
 
-      var url = "https://api.tumblr.com/v2/blog/eccenoctua.tumblr.com/posts/?callback=JSON_CALLBACK";
+      var url = "https://api.tumblr.com/v2/blog/pftblog.tumblr.com/posts/?callback=JSON_CALLBACK";
 
       $http.jsonp( url, {
         params: {
@@ -52,7 +52,6 @@
         }
       }).then(function( data ) {
         $scope.articles = data.data.response.posts;
-        console.log( data.data.response.posts[ 0 ] );
       });
 
     } ]);

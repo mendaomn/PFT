@@ -13,13 +13,16 @@
       //- 
       .appr__Videos
         .row
+          .flex.center.vertical(ng-show="!videos || videos.length == 0")
+            h3.appr__Subtitle(style="margin: 100px 0") Qui verranno caricati tutti i video di PFT!
+            
           .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="video in videos | limitTo: quantity")
             a.appr__Video.tile(target="_blank" href="https://www.youtube.com/watch?v={{video.snippet.resourceId.videoId}}")
               p.video__Title {{ video.snippet.title }}
               .video__Thumb(style="background-image:url({{video.snippet.thumbnails.high.url}})")
         .row
           .flex.vertical.center
-            button.cta.strong(ng-click="quantity = quantity ? false : 6") Vedi tutti
+            button.cta.strong(ng-click="quantity = quantity ? false : 6", ng-show="videos.length > 6") Vedi tutti
     
   .appr__Strip
     .wrapper
@@ -31,11 +34,14 @@
   div(ng-controller="ArticlesCtrl")
     .wrapper
       .appr__Articles
-        .row          
+        .row
+          .flex.center.vertical(ng-show="!articles || articles.length == 0")
+            h3.appr__Subtitle(style="margin: 100px 0") Qui verranno caricati tutti gli articoli di PFT!
+            
           .col__4-12.col__md-6-12.col__sm-12-12(ng-repeat="article in articles | limitTo: quantity")
             a.appr__Video.tile(target="_blank" href="{{article.post_url}}")
               p.video__Title {{ article.summary }}
               .video__Thumb(style="background-image:url({{article.photos[0].alt_sizes[2].url}})")
         .row
           .flex.vertical.center
-            button.cta.strong(ng-click="quantity = quantity ? false : 6") Vedi tutti
+            button.cta.strong(ng-click="quantity = quantity ? false : 6", ng-show="articles.length > 6") Vedi tutti
