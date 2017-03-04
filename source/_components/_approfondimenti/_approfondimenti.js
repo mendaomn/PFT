@@ -14,7 +14,7 @@
       var api = "https://www.googleapis.com/youtube/v3/channels";
       var payload = {
         part: "contentDetails",
-        id: "UCe0DNp0mKMqrYVaTundyr9w", // "UCi22jkhYuLD47CDtHQza0xA",
+        id: "UCKyRrsj88beVHLtpp3R4G-A",
         key: "AIzaSyBIcXqEJ4zryH4RMx_S9CJ4SoMWKQgCQ6o"
       };
 

@@ -190,7 +190,7 @@ $numberOfSlides: 5
     justify-content: center
     align-items: center
 
-    margin: 50px 0
+    margin: 25px 0 0
 
     button
       &:first-child
@@ -206,11 +206,12 @@ $numberOfSlides: 5
     .crsl__Headline
       .strong
         +pageTitle()
+        margin-bottom: 50px
 
       .weak
         +pageSubtitle()
 
-@media (max-width: 600px)
+@media (max-width: 700px)
   .crsl__Container
     .crsl__Headline
       .strong
